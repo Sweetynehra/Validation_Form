@@ -1,8 +1,7 @@
 Design a Login Validation Form to check the errors, valid user inputs
 
-Here is the validate code function -
-/////
- const validate = () => {
+Here is the validate code function snippet shows checks of each field -
+
       const newErrors = {};
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       const usernameRegex = /^[a-zA-Z0-9_]+$/;
@@ -10,24 +9,7 @@ Here is the validate code function -
       const phoneRegex = /^\d{10}$/;
       const panRegex = /^\d{10}$/;
       const aadharRegex = /^\d{12}$/;
-  
-      if (!formData.firstName.match(/^[A-Z][a-z]*$/)) newErrors.firstName = 'First Name should start with capital letter and contain only alphabets';
-      if (!formData.lastName.match(/^[A-Z][a-z]*$/)) newErrors.lastName = 'Last Name should start with capital letter and contain only alphabets';
-      if (!formData.username.match(usernameRegex)) newErrors.username = 'Username can only contain letters, numbers, and underscores';
-      if (!formData.email.match(emailRegex)) newErrors.email = 'Invalid email address';
-      if (!formData.password) {
-        newErrors.password = 'Password is required';
-      } else if (!passwordRegex.test(formData.password)) {
-        newErrors.password = 'Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character';
-      }
-      if (!formData.phone.match(phoneRegex)) newErrors.phone = 'Phone number must be 10 digits';
-      if (!formData.pan.match(panRegex)) newErrors.pan = 'PAN number must be 10 digits';
-      if (!formData.aadhar.match(aadharRegex)) newErrors.aadhar = 'Aadhar number must be 12 digits';
-  
-      setErrors(newErrors);
-      return Object.keys(newErrors).length === 0;
-    };
-////
+     
 
 Screenshots - 
 ![Screenshot (228)](https://github.com/Sweetynehra/Validation_Form/assets/130247953/788e9a0a-acaf-485c-b887-985fdbca6573)
